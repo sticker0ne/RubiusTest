@@ -1,0 +1,95 @@
+<script type="text/x-template" id="modal-template">
+    <transition name="modal">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
+
+                    <div class="modal-header">
+                        <slot name="header">
+                            Добро пожаловать
+                        </slot>
+                    </div>
+
+                    <div class="modal-body">
+                        <slot name="body">
+                            {{$root.helloString}}
+                        </slot>
+                    </div>
+
+                    <div class="modal-footer">
+                        <slot name="footer">
+                            Ваше имя:
+                            <input type="text" v-model="$root.inputName">
+                            <button class="modal-default-button" @click="$emit('close')">
+                                OK
+                            </button>
+                        </slot>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </transition>
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <title>musicClient</title>
+</head>
+<body>
+<div id="app">
+
+    <!-- use the modal component, pass in the prop -->
+    <modal v-if="showModal" @close="close">
+        <!--
+          you can use custom content here to overwrite
+          default content
+        -->
+        <h3 slot="header">Добро пожаловать</h3>
+    </modal>
+    <div class="header">
+        <div v-if="userId" id="logo">{{headerString}}, {{userName}}</div>
+        <div class="header-right">
+            <a @click="clearData" href="">Войти как новый</a>
+        </div>
+    </div>
+    <div class="favorite">
+        Избранное
+        <div v-for="track in favorite" class="track" @click="stop()">
+            <div class="trackName">{{track.name}} длительность {{track.duration}} рейтинг {{track.rating}}</div>
+        </div>
+
+    </div>
+    <div @click="fillAlbums(musician.id)" class="musician" v-for="musician in musicians">
+        {{musician.name}} {{musician.age}} лет
+        <div @click="fillTracks(album.id, musician.id)" v-if="musician.isActive" class="album"
+             v-for="album in musician.albums">
+            {{album.name}} {{album.releaseYear}}
+            <div v-if="album.isActive" v-for="track in album.tracks" class="track" @click="stop()">
+                <div class="trackName">{{track.name}} длительность {{track.duration}} рейтинг {{track.rating}}</div>
+                <a href="" v-if="!track.isFavorite" @click="addToFavorite(track.id, album.id, musician.id)">
+                    Добавить в избранное</a>
+                <a href="" v-else @click="removeFromFavorite(track.id, album.id, musician.id)">Убрать из избранного</a>
+                <a href="" v-if="!track.isListened"
+                   @click="addToListened(track.id, album.id, musician.id)">Прослушать</a>
+                <a v-else>Уже прослушано</a>
+                <br>
+                <a @click="setLikeStatus(track.id, album.id, musician.id, 'like')" href=""
+                   v-if="track.likeStatus == 'none'|| track.likeStatus == 'disliked'">
+                    Поставить мне нравится
+                </a>
+                <a @click="setLikeStatus(track.id, album.id, musician.id, 'dislike')" href="" v-else>
+                    Поставить мне не нравится
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/main.js"></script>
+</html>

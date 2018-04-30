@@ -1,0 +1,11 @@
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\bin\Release\netcoreapp2.0\musicServiceCore.deps.json
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\bin\Release\netcoreapp2.0\musicServiceCore.runtimeconfig.json
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\bin\Release\netcoreapp2.0\musicServiceCore.runtimeconfig.dev.json
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\bin\Release\netcoreapp2.0\musicServiceCore.dll
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\bin\Release\netcoreapp2.0\musicServiceCore.pdb
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.csprojResolveAssemblyReference.cache
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.csproj.CoreCompileInputs.cache
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.AssemblyInfoInputs.cache
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.AssemblyInfo.cs
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.dll
+C:\Users\Mirt\Desktop\Programming\musicService\musicServiceCore\musicServiceCore\obj\Release\netcoreapp2.0\musicServiceCore.pdb

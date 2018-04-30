@@ -1,0 +1,168 @@
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    width: 300px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+
+#logo {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 25px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    background-color: #ddd;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #38AE6F;
+    color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+    background-color: #38AE6F;
+    color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+
+.musician {
+    border-radius: 15px;
+    width: 600px;
+    background: aqua;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-family: Georgia;
+    font-size: 30px;
+}
+.favorite {
+    border-radius: 15px;
+    width: 600px;
+    background: aqua;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-family: Georgia;
+    font-size: 30px;
+}
+.album {
+    font-family: Georgia;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    background: crimson;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.track{
+    font-family: Georgia;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    background: darkorange;
+    margin: auto;
+    margin-top: 10px;
+    cursor: auto;
+}
+.track a{
+    cursor: pointer;
+}
